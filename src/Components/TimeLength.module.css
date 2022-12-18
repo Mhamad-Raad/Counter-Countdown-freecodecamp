@@ -6,7 +6,7 @@
 }
 
 .Ltitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: rgb(255, 255, 255);
   margin: 0;
@@ -17,7 +17,7 @@
 .LtimeBg {
   background-color: transparent;
   color: whitesmoke;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
   display: flex;
   flex-direction: row;
@@ -27,14 +27,16 @@
 
 .arrowBtn {
   cursor: pointer;
+  font-weight: 900 !important;
+  font-size: 1.8rem !important;
 }
 
 .LtimeGroup {
   background-color: transparent;
   border: none;
   color: whitesmoke;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   outline: none;
+  margin: 5px 20px; 
 }
