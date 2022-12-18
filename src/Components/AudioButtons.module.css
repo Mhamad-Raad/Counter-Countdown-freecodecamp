@@ -1,0 +1,16 @@
+.AudioButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ActionButton {
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  outline: none;
+  margin: 0 10px;
+}
