@@ -10,7 +10,7 @@ export default function TimeLength({ title, time, increment, decrement }) {
           className={(css.LtimeGroup, css.arrowBtn)}
           onClick={decrement}
         />
-        <p className={css.LtimeGroup}>{time}</p>
+        <p className={css.LtimeGroup}>{time.minute}</p>
         <FaArrowUp
           className={(css.LtimeGroup, css.arrowBtn)}
           onClick={increment}
