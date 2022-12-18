@@ -1,6 +1,9 @@
 import { useState } from "react";
+
 import Title from "./Components/Title";
 import TimeLength from "./Components/TimeLength";
+import CountdownSession from "./Components/CountdownSession";
+
 import "./App.css";
 
 function App() {
@@ -40,6 +43,8 @@ function App() {
           decrement={decrementSession}
         />
       </div>
+
+      <CountdownSession currentSession="Session" timeLeft="25:00" />
     </div>
   );
 }
