@@ -3,6 +3,7 @@ import { useState } from "react";
 import Title from "./Components/Title";
 import TimeLength from "./Components/TimeLength";
 import CountdownSession from "./Components/CountdownSession";
+import AudioButtons from './Components/AudioButtons';
 
 import "./App.css";
 
@@ -45,9 +46,12 @@ function App() {
       </div>
 
       <CountdownSession currentSession="Session" timeLeft="25:00" />
+
+      <AudioButtons />
     </div>
   );
 }
 
 export default App;
+
 
