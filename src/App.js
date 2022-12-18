@@ -6,16 +6,18 @@ import CountdownSession from "./Components/CountdownSession";
 import AudioButtons from "./Components/AudioButtons";
 import CreatedBy from "./Components/CreatedBy";
 
+import finish from "./Assets/A.mp3";
+
 import "./App.css";
 
 function App() {
   const [breakLength, setBreakLength] = useState({
-    second: 5,
-    minute: 0,
+    second: 0,
+    minute: 5,
   });
   const [sessionLength, setSessionLength] = useState({
-    second: 5,
-    minute: 0,
+    second: 0,
+    minute: 25,
   });
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,14 +27,16 @@ function App() {
       if (prev.minute === 60) {
         return prev;
       }
-      return { ...prev, minute: prev.minute + 1 };
+      return { ...prev, minute: prev.minute + 1, second: 0 };
     });
   };
 
   const decrementBreak = () => {
     setBreakLength((prev) => {
-      if (prev.minute === 0) {
+      if (prev.minute === 1) {
         return prev;
+      } else if (prev.second !== 0) {
+        return { ...prev, second: 0 };
       }
       return { ...prev, minute: prev.minute - 1 };
     });
@@ -43,14 +47,16 @@ function App() {
       if (prev.minute === 60) {
         return prev;
       }
-      return { ...prev, minute: prev.minute + 1 };
+      return { ...prev, minute: prev.minute + 1, second: 0 };
     });
   };
 
   const decrementSession = () => {
     setSessionLength((prev) => {
-      if (prev.minute === 0) {
+      if (prev.minute === 1) {
         return prev;
+      } else if (prev.second !== 0) {
+        return { ...prev, second: 0 };
       }
       return { ...prev, minute: prev.minute - 1 };
     });
@@ -64,16 +70,16 @@ function App() {
 
   const playPause = () => {
     setIsPlaying((prev) => !prev);
-    console.log(isPlaying);
   };
 
   useEffect(() => {
+    const audio = new Audio(finish);
+    audio.volume = 1;
+
     let interval;
     if (isPlaying) {
       interval = setInterval(() => {
-        console.log(sessionLength);
         if (sessionLength.second === 0 && sessionLength.minute === 0) {
-          console.log("break");
           setBreakLength((prev) => {
             if (prev.second === 0) {
               return { ...prev, second: 59, minute: prev.minute - 1 };
@@ -96,6 +102,7 @@ function App() {
           sessionLength.minute === 0
         ) {
           clearInterval(interval);
+          audio.play();
           reset();
         }
       }, 1000);
