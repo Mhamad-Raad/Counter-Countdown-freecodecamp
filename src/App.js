@@ -4,6 +4,7 @@ import Title from "./Components/Title";
 import TimeLength from "./Components/TimeLength";
 import CountdownSession from "./Components/CountdownSession";
 import AudioButtons from './Components/AudioButtons';
+import CreatedBy from './Components/CreatedBy';
 
 import "./App.css";
 
@@ -48,6 +49,9 @@ function App() {
       <CountdownSession currentSession="Session" timeLeft="25:00" />
 
       <AudioButtons />
+
+
+      <CreatedBy />
     </div>
   );
 }

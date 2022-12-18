@@ -1,0 +1,21 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+}
+
+.designed {
+  font-weight: 600;
+  color: blueviolet;
+}
+
+.by {
+  font-weight: 700;
+  color: rgb(255, 56, 56);
+  text-decoration: none;
+}
