@@ -13,11 +13,11 @@ import "./App.css";
 function App() {
   const [breakLength, setBreakLength] = useState({
     second: 0,
-    minute: 1,
+    minute: 5,
   });
   const [sessionLength, setSessionLength] = useState({
     second: 0,
-    minute: 1,
+    minute: 25,
   });
 
   const [isPlaying, setIsPlaying] = useState(false);
