@@ -1,0 +1,15 @@
+.length {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Ltitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
