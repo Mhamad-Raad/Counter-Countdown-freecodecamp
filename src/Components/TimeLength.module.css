@@ -23,6 +23,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .arrowBtn {
@@ -39,4 +40,39 @@
   cursor: pointer;
   outline: none;
   margin: 5px 20px; 
+}
+
+
+@media only screen and (max-width: 550px) {
+  .length {
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+  }
+
+  .Ltitle {
+    font-size: 1.5rem;
+  }
+
+  .LtimeBg {
+    font-size: 1.3rem;
+  }
+
+  .arrowBtn {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .Ltitle {
+    font-size: 1.2rem;
+  }
+
+  .LtimeBg {
+    font-size: 1.1rem;
+  }
+
+  .arrowBtn {
+    font-size: 1.2rem !important;
+  }
 }

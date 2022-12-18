@@ -1,6 +1,6 @@
 import css from './CreatedBy.module.css'
 
-export default function () {
+export default function CreatedBy () {
   return (
     <div className={css.about}>
       <p className={css.designed}>
